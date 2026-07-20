@@ -219,5 +219,3 @@ __marimo__/
 
 # Visual Studio Code
 .vscode/
-!.vscode/extensions.json
-!.vscode/settings.json.example
