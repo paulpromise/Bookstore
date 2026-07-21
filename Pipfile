@@ -10,6 +10,8 @@ django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
 django-allauth = {extras = ["socialaccount"], version = "*"}
 dj-database-url = "*"
+sendgrid = "*"
+django-sendgrid-v5 = "*"
 
 [dev-packages]
 
