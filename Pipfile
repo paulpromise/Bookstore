@@ -12,6 +12,7 @@ django-allauth = {extras = ["socialaccount"], version = "*"}
 dj-database-url = "*"
 sendgrid = "*"
 django-sendgrid-v5 = "*"
+pillow = "*"
 
 [dev-packages]
 
