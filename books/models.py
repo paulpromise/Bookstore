@@ -10,7 +10,9 @@ class Book(models.Model):
     author = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     cover = models.ImageField(upload_to="covers/", blank=True)
-    
+
+    class Meta:
+        permissions = [("spercial_status", "Can read books")]
 
     def __str__(self):
         return self.title
