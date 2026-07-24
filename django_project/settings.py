@@ -27,6 +27,12 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = []
 
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
+
 
 # Application definition
 
@@ -40,7 +46,7 @@ INSTALLED_APPS = [
     # Local
     "accounts",
     "pages",
-    'books',
+    "books",
     # Third-party
     "crispy_forms",
     "crispy_bootstrap5",
@@ -51,7 +57,10 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.github",
     "allauth.socialaccount.providers.microsoft",
     "allauth.socialaccount.providers.google",
+    # Debug Tool
+    "debug_toolbar",
 ]
+
 # django-crispy-forms
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"  # new
 CRISPY_TEMPLATE_PACK = "bootstrap5"  # new
@@ -69,8 +78,10 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
-    # Standard Middlewares
+    # Standard Middlewares for Login
     "django.contrib.auth.middleware.LoginRequiredMiddleware",
+    # debug Tool
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'django_project.urls'
